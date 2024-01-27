@@ -8,7 +8,7 @@ import { toast } from 'react-toastify'
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import ApiService from '../../Common/ApiService'
-// import pencilImg from '../../assets/Login/pencilImg.svg'
+import pencilImg from '../../assets/Login/pencilImg.svg'
 function Signup() {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
@@ -52,7 +52,7 @@ function Signup() {
                         sx={{ color: "#ffff" }}>
                         please login...
                     </Typography> */}
-                    {/* <img src={pencilImg} className='pencilImg' /> */}
+                    <img src={pencilImg} className='pencilImg' />
                     {/* <Button variant='contained' color='warning' onClick={() => toggleLogin()}>Sigh In</Button> */}
                 </div>
                 <div className='signupForm'>
