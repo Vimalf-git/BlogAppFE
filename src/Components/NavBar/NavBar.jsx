@@ -12,6 +12,7 @@ import { IoMdCloseCircle } from "react-icons/io";
 import useLogout from '../../Common/useLogout';
 // import useLogout from '../../Common/useLogout'
 const NavBar = () => {
+  const navigate=useNavigate()
   const [avatarPopUp, setAvatarPopUp] = useState(false);
   const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -41,11 +42,13 @@ const NavBar = () => {
       },
     },
   }));
-  const logout = useLogout()
+  const useLogout=()=>{
+    sessionStorage.clear()
+    navigate('/login')
+  }
   const { username, profilePic } = useContext(UserDataGlobal)
 
   const [hamBurger, setHamBurger] = useState(false);
-  const navigate=useNavigate()
   return (
     <>
       <header className='navbar'>
@@ -74,7 +77,7 @@ const NavBar = () => {
         {avatarPopUp ?
           <div className='avatarPop'>
             <Link to={'/profile'}>Profile</Link>
-            <Button onClick={() => { logout() }}><Logout className='logouticon' /> &nbsp;Logout</Button>
+            <Button onClick={() => { useLogout() }}><Logout className='logouticon' /> &nbsp;Logout</Button>
           </div> :
           <></>}
       </header>
@@ -105,16 +108,11 @@ const NavBar = () => {
             <Link to={"/mypost"}>MyPost</Link>
             <Link to={"/postcreate"}>Create</Link>
             <Link to={"/friendsList"}>Friends</Link>
-            <Button onClick={() => {  }}><Logout /> &nbsp;Logout</Button>
+            <Button onClick={() => { useLogout() }}><Logout /> &nbsp;Logout</Button>
             {/* </ul> */}
           </div>
 
         </div> : <></>}
-        {/* {avatarPopUp ?
-          <div className='avatarPop'>
-            <Link to={'/profile'}>Profile</Link>
-          </div> :
-          <></>} */}
       </header>
     </>
   )
