@@ -1,0 +1,51 @@
+.frndslist{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    background-color: rgb(237, 237, 245);
+}
+.frndsCard{
+    width: 20rem;
+    height: 8rem;
+    display: flex;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    margin-top: 2rem;
+    background-color: #fff;
+    box-shadow: 0 1.5rem 2rem rgb(0, 0, 0,0.1);
+    gap: 1rem;
+    border-radius: 5px;
+}
+.frndscardpic{
+    width: 6rem;
+    height: 8rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    /* overflow: hidden; */
+    margin-left: 1rem;
+    /* background-color: aqua; */
+    object-fit: fill;
+    display: flex;
+    align-items: center;
+
+}
+.frdimg{
+    /* position: relative; */
+    /* top: 1rem; */
+    /* left */
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    /* overflow: hidden; */
+    margin-left: 1rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+} 
+.frndname{
+    margin-top: 1rem;
+}

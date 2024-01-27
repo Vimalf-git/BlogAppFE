@@ -1,0 +1,102 @@
+.userProfile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background-color: rgb(227, 233, 247);
+}
+.tittle>h4{
+    margin-top: 2rem;
+
+}
+.userImgDesign {
+    width: 8rem;
+    height: 8rem;
+    background-color: rgb(63, 63, 252);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.emptyImg{
+    width: 7rem;
+    height: 7rem;
+    background-color: #ffff;
+    border-radius: 50%;
+}
+.userImgcom {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.userImg {
+    /* position: relative; */
+    /* top: 1rem; */
+    /* left */
+    padding: .3rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    /* overflow: hidden; */
+    /* margin-left: 1rem; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.editiconConPro {
+    background-color: black;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    top: -2.4rem;
+    right: -4.7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profilEditIcon {
+    color: #ffff;
+    /* background-color: black; */
+    padding: .1rem;
+    width: 10rem;
+    /*height: 10rem; */
+    /* padding: 1rem; */
+    /* border-radius: 50%; */
+}
+.personInfo{
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 3rem;
+    background-color: #ffff;
+    margin-bottom: 2rem;
+}
+.profileInput{
+    width:19rem;
+    height: 3rem;
+}
+input:focus{
+    outline: none;
+    border: none;
+    border-color: 2px solid rgb(109, 109, 241);
+    
+  }
+  input::placeholder{
+    color: #bac7df;
+    opacity: 1!important;
+    font-family: 'Montserrat', sans-serif;
+  }

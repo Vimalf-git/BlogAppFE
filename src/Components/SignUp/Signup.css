@@ -1,0 +1,95 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.signupPage{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    /* gap: 1rem; */
+    flex-wrap: wrap;
+}
+.designSignupPart{
+    width: 40%;
+    height: 100vh;
+    /* background:linear-gradient(-40deg,#4481eb,#04befe); */
+    /* background-color: red; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* align-items: center; */
+    /* gap: 2rem; */
+}
+.signupForm{
+    width: 60%;
+    height: 100vh;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center ; 
+}
+.form-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.LogMSign{
+    width: 19rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.pencilImg{
+    width: 25rem;
+}
+@media(max-width:769px){
+    .signupPage{
+        width: 800px;
+    }
+    .designSignupPart{
+        width: 350px;
+        /* display: none; */
+        /* width: 600px;
+        height: 14rem;
+        position: relative;
+        top: 0%; */
+    }
+    .signupForm{
+        width: 450px;
+        position: relative;
+        bottom: 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pencilImg{
+        width: 18rem;
+    }
+}
+@media(max-width:426px){
+    .signupPage{
+        width: 426px;
+        
+    }
+    .designSignupPart{
+        display: none;
+        /* width: 600px;
+        height: 14rem;
+        position: relative;
+        top: 0%; */
+    }    
+    .signupForm{
+        width: 426px;
+        position: relative;
+        bottom: 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
