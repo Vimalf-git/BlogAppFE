@@ -13,12 +13,10 @@ const UserProfile = () => {
      setUploadProfileImg,getData } = useContext(UserDataGlobal)
   const [localname, setLocalname] = useState();
   const updateProfile = async () => {
-    console.log('enter');
     let payload = new FormData();
     payload.append('profilePic', UploadprofileImg?UploadprofileImg:null);
     payload.append('email', mail)
     payload.append('username', localname);
-    console.log(payload);
     const res = await ApiService.put('/updateprofile', payload, {
       headers: { 'Content-Type': 'multipart/form-data' }
     })
@@ -48,9 +46,9 @@ const UserProfile = () => {
       </div><br />
       <div className='personInfo'>
         <h4>Personal Info</h4>
-        <TextField sx={{ m: 1, width: '35ch' }} value={localname} onChange={(e) => { setLocalname(e.target.value) }}
+        <TextField  className='profileInput' value={localname} onChange={(e) => { setLocalname(e.target.value) }}
           id="outlined-basic"  variant="outlined" />
-        <TextField sx={{ m: 1, width: '35ch' }} type='text' className='profileInput' placeholder='' value={mail} disabled />
+        <TextField  type='text' className='profileInput' placeholder='' value={mail} disabled />
         <Button onClick={updateProfile}>SaveChange</Button>
       </div>
 

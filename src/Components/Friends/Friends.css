@@ -49,3 +49,9 @@
 .frndname{
     margin-top: 1rem;
 }
+
+@media(max-width:376px){
+    .frndslist{
+        width: 376px;
+    }
+}

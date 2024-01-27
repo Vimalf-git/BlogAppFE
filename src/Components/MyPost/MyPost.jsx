@@ -27,7 +27,6 @@ const MyPost = () => {
 
     }
   }
-  // console.log(feeds);
 
   useEffect(() => {
     getAllFeed();
@@ -45,7 +44,7 @@ const MyPost = () => {
     navigate(`/editfeed/${id}`)
   }
   return (
-    <div>
+    <>
       <div className='cardParent'>
         {
           feeds.length > 0 ? feeds.map((e, i) => {
@@ -81,7 +80,7 @@ const MyPost = () => {
           }) : <><HashLoader color="#36d7b7" /> No Data Found</>
         }
       </div>
-    </div>
+    </>
   )
 }
 

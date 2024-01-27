@@ -86,7 +86,8 @@
     margin-bottom: 2rem;
 }
 .profileInput{
-    width:19rem;
+    margin: 1px !important;
+    width:35ch !important;
     height: 3rem;
 }
 input:focus{
@@ -99,4 +100,98 @@ input:focus{
     color: #bac7df;
     opacity: 1!important;
     font-family: 'Montserrat', sans-serif;
+  }
+
+  @media(min-width:2000px){
+    .userProfile {
+        width: 2560px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        background-color: rgb(227, 233, 247);
+    }
+    .tittle>h4{
+        margin-top: 4rem;
+    
+    }
+    .userImgDesign {
+        width: 12rem;
+        height: 12rem;
+        background-color: rgb(63, 63, 252);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .emptyImg{
+        width: 10rem;
+        height: 10rem;
+        background-color: #ffff;
+        border-radius: 50%;
+    }
+    .userImgcom {
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        background-color: red;
+    }
+    
+    .userImg {
+        /* position: relative; */
+        /* top: 1rem; */
+        /* left */
+        padding: .3rem;
+        width: 11rem;
+        height: 11rem;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        /* overflow: hidden; */
+        /* margin-left: 1rem; */
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    
+    .editiconConPro {
+        background-color: black;
+        width: 2.5rem;
+        height: 2.5rem;
+        position: relative;
+        top: -2.4rem;
+        right: -4.7rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .profilEditIcon {
+        color: #ffff;
+        /* background-color: black; */
+        padding: .1rem;
+        width: 10rem;
+        
+    }
+    .personInfo{
+        display: flex;
+        flex-direction: column;
+        width: 50rem;
+        height: 40rem;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        border-radius: 3rem;
+        background-color: #ffff;
+        margin-bottom: 2rem;
+    }
+    
+    .profileInput{
+        margin: 1px !important;
+        width:50ch !important;
+        height: 5ch !important;
+    }
   }

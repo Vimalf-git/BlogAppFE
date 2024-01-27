@@ -7,16 +7,14 @@ import { Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import uploadImg from '../../image/profile/noimg.jpg'
 import ApiService from '../../Common/ApiService';
+import usernoImg from '../../image/profile/836.jpg'
 const PostView = () => {
   const [feeds, setFeeds] = useState([]);
 let params=useParams();
-console.log(params.id);
 
   const getLocalData = async (id) => {
     try {
-        console.log('enter');
         let res=await ApiService.get(`getUpdatefeed/${id}`)
-        console.log(res.data.updateFeed);
         let data=res.data.updateFeed;
         setFeeds(data)
     } catch (error) {
@@ -25,14 +23,12 @@ console.log(params.id);
 }
 
   useEffect(() => {
-    console.log("kjhv");
     getLocalData(params.id);
   }, [])
-  console.log(feeds);
 
   return (
     <section>
-      <div className='cardParent'>
+      <div className='PostViewcardParent'>
         {
           feeds ? 
              <div className='postViewCardMyPost'>
@@ -48,7 +44,7 @@ console.log(params.id);
               <div className='postViewcardFooter'>
                 <div className='footerProfile'>
                   <div className='Feedscardpic'>
-                    {/*  <img className='feedimg' src={feeds.profileImgUrl} /> */}
+                     {/* <img className='feedimg' src={params.img?params.img:usernoImg} /> */}
                   </div>
                   <div>
                     <p className='postcreatedby'>{feeds.name}</p>

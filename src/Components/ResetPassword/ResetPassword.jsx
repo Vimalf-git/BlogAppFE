@@ -17,7 +17,6 @@ function ResetPassword() {
 
         try {
             let res = await ApiService.get(`forgetpass/getres/${id}/${token}`)
-            console.log(res.data.status);
             if (res.data.status === 200) {
                 setMail(res.data.mail)
                 toast.success("verified");

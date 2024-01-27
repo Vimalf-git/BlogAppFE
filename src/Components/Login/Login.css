@@ -26,6 +26,7 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    /* background-color: aqua; */
 
 }
 
@@ -98,5 +99,11 @@
         position: relative;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media(min-width:2000px){
+    .loginPage{
+        width: 2600px;
     }
 }

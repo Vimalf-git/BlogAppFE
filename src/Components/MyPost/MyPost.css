@@ -42,3 +42,35 @@
     align-items: center;
     border-radius: 4px;
 }
+
+@media(max-width:376px){
+    .cardParent{
+        width: 376px;
+    }
+}
+
+@media(min-width:2000px){
+    .cardParent{
+        width: 2560px;
+        height: auto;
+    }
+    .postCardMyPost{
+        width: 50rem;
+        height: 60rem;
+        background-color: #fff;
+        box-shadow: 0 1.5rem 2rem rgb(0, 0, 0, .1);
+        border-radius: 30px;
+        text-decoration: none;
+        color: black;
+    }
+    .btns{
+    height: 5rem;
+    display: flex;
+    }
+    .editBtn,.deleteBtn{
+
+        width: 8rem;
+        height: 3rem;
+        font-size: 2rem;
+    }
+}

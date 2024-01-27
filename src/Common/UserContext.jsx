@@ -24,22 +24,15 @@ function UserContext({children}){
 
 // Dashboard
         const resFeed = await ApiService.get('/allfeeds');
-        console.log(resFeed.data.feeds);
         let resUserList = await ApiService.get('/getuserlist');
-        console.log(resUserList.data.userList);
       if (resFeed.status == 200) {
-        // setFeedData(resFeed.data.feeds)
         let userList=resUserList.data.userList;
         let feedsList=resFeed.data.feeds;
         let sam=[]
         for(let j=0;j<userList.length;j++){
              for(let i=0;i<feedsList.length;i++){
                 const obj={}
-                console.log(userList[j]);
-                console.log(feedsList[i]);
-                console.log(userList[j].mail==feedsList[i].mail);
                 if(userList[j].mail==feedsList[i].mail){
-                    console.log("enter into loop");
                     obj['category']=feedsList[i].category?feedsList[i].category:'',
                     obj['desc']=feedsList[i].desc?feedsList[i].desc:'',
                     obj['imageUrl']=feedsList[i].imageUrl?feedsList[i].imageUrl:'',
@@ -50,10 +43,9 @@ function UserContext({children}){
                     obj['profilePic']=userList[j].profilePic?userList[j].profilePic:''
                     sam.push(obj)
                    }
-                //    console.log(obj);
             }
         }
-        console.log(sam);
+        
         setFeedData(sam)
         }
         // mypost
@@ -69,7 +61,6 @@ function UserContext({children}){
    useEffect(()=>{
     getData()
    },[])
-   console.log(feedData);
     return(
         <UserDataGlobal.Provider value={{username,setUsername,feedData,myPost,
             setMyPost, mail,UploadprofileImg,profilePic,setUploadProfileImg,getData}}>

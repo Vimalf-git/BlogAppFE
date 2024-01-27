@@ -1,0 +1,81 @@
+@media(max-width:426px){
+    .createpost{
+        width: 426px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .postcreateform{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        /* margin-bottom: 2rem; */
+    }
+    .postform{
+        width: 20rem;
+    }
+}
+@media(max-width:376px){
+    .createpost{
+        width: 376px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .postcreateform{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        /* margin-bottom: 2rem; */
+    }
+    .postform{
+        width: 20rem;
+    }
+}
+
+@media(min-width:2000px){
+    .createpost{
+        width: 2560px;
+        height: 100vh;
+    }
+    .postcreateform{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .postform{
+        width: 80rem;
+        height: 60rem;
+        display: flex;
+        /* justify-content: center; */
+        gap: 5rem;
+    }
+    .faImg{
+        width: 50rem !important;
+        height: 50rem !important;
+      }
+      .imgsecpost{
+        width: 10rem;
+        height: 10rem;
+        margin-left: 3rem;
+      }
+    .textFeild,.postDesc,.options{
+        width: 90%;
+        height: 5rem;
+        margin-left: 4rem;
+    }      
+    .postBtn>button{
+        width: 10rem;
+        height: 4rem;
+        margin-right: 5rem;
+    }
+    .createPosttittle>h3{
+        font-size: 3rem;
+        font-weight: 400;
+    }
+}

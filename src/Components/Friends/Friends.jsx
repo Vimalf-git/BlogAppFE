@@ -4,6 +4,7 @@ import ApiService from '../../Common/ApiService'
 import { jwtDecode } from 'jwt-decode';
 import { HashLoader } from 'react-spinners';
 import { Login } from '@mui/icons-material';
+import userNonImg from '../../image/profile/836.jpg'
 const Friends = () => {
     const [userList, setUserList] = useState([]);
     const getUserList = async () => {
@@ -11,11 +12,8 @@ const Friends = () => {
         let name = jwtDecode(token).username
         try {
             let res = await ApiService.get('/getuserlist');
-            console.log(res);
             if (res.status == 200) {
-                console.log(res.data.userList);
                 let filterList = res.data.userList.filter((e) => e.name != name);
-                console.log(filterList);
                 setUserList(filterList);
             }
         } catch (error) {
@@ -25,13 +23,12 @@ const Friends = () => {
     useEffect(() => {
         getUserList()
     }, [])
-    console.log(userList);
     return (
             <div className='frndslist'>
                 {userList.length>0? userList.map((e) => {
                     return <div className='frndsCard'>
                         <div className='frndscardpic'>
-                            <img className='frdimg' src={e.profilePic} />
+                            <img className='frdimg' src={e.profilePic?e.profilePic:userNonImg} />
                         </div>
                         <div className='frndname'>
                             <h4>{e.name}</h4>

@@ -9,7 +9,7 @@ import { jwtDecode } from 'jwt-decode'
 import axios from 'axios'
 import ApiService from '../../Common/ApiService'
 import { UserDataGlobal } from '../../Common/UserContext';
-
+import './EditPost.css'
 const EditPost = () => {
     const {username,mail}=useContext(UserDataGlobal)
 
@@ -18,7 +18,6 @@ const EditPost = () => {
     let params = useParams()
     const updataPost = async (value) => {
         const payload = new FormData();
-        console.log(postimageUpload);
         payload.append('file', postimageUpload)
         payload.append('tittle', value.tittle)
         payload.append('category', value.category)
@@ -26,7 +25,6 @@ const EditPost = () => {
         payload.append('mail', mail)
         payload.append('name', username)
         payload.append('id',params.id)
-        console.log(payload);
 
         try {
             let res = await ApiService.put('/updatepost', payload, {
@@ -56,14 +54,9 @@ const EditPost = () => {
         }
     );
     const getLocalData = async (id) => {
-        console.log(id);
         try {
             let res=await ApiService.get(`getUpdatefeed/${id}`)
-            console.log(res.data.updateFeed);
             let data=res.data.updateFeed;
-            // console.log(myPost);
-            // let val=myPost.filter((e)=>e._id==id);
-            // console.log(val);
             let sam={
                 tittle:data.tittle,
                 desc:data.desc,
@@ -81,7 +74,7 @@ const EditPost = () => {
     }, [])
     return (
         <div className='createpost'>
-            <div>
+            <div className='createPosttittle'>
                 <h3> Update Post</h3>
             </div>
             <div className='postcreateform'>
@@ -115,7 +108,7 @@ const EditPost = () => {
                                 <IoMdImages className='faImg' />
                             </div>
                             <div className='postBtn'>
-                                <Button variant='contained' type='submit'>Post</Button>
+                                <Button  variant='contained' type='submit'>Post</Button>
                             </div>
                         </form>
                     )}

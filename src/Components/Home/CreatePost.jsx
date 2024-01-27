@@ -22,14 +22,12 @@ const CreatePost = () => {
         let mail = jwtDecode(token).email
         
         const payload = new FormData();
-        console.log(postimageUpload);
         payload.append('file', postimageUpload)
         payload.append('tittle',value.tittle)
         payload.append('category',value.category)
         payload.append('desc',value.desc)
         payload.append('mail',mail)
         payload.append('name',name)
-        console.log(payload);
         
         try {
             let res = await ApiService.post('/postfeed', payload,{
@@ -52,7 +50,7 @@ const CreatePost = () => {
     })
     return (
         <div className='createpost'>
-            <div>
+            <div className='createPosttittle'>
                 <h3>Create Post</h3>
             </div>
             <div className='postcreateform'>

@@ -124,3 +124,121 @@ font-weight: 800;
     display: flex;
     justify-content: center;
 }
+
+@media(max-width:376px){
+    .dashboard{
+        width: 376px;
+    }
+}
+@media(min-width:2000px){
+    .dashboard{
+        width: 2560px;
+    }
+    
+    .postCard{
+        width: 50rem;
+        height: 55rem;
+    }
+    .postImgCon{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        overflow: hidden;
+    
+    }
+    .postImg{
+        width: 40rem;
+        height: 30rem;
+        aspect-ratio: 1/1;
+        border-radius: 15px;
+    }
+    .postTittle{
+        width: 100%;
+        height: 3rem;
+    }
+    .postTittle>h4{
+    font-size: 2rem;
+    margin-left: 2rem;
+    font-weight: 600;
+    
+    /* padding: .5rem; */
+    }
+    .postDes{
+        width: 100%;
+        height: 14rem;
+    }
+    .postDes>p{
+        font-size: 1.8rem;
+        margin-left: 2rem;
+    
+        /* padding: .5rem; */
+    }
+    .cardFooter{
+        width: 100%;
+        display: flex;
+        
+        
+    }
+    .Feedscardpic{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        /* aspect-ratio: 1/1; */
+        /* overflow: hidden; */
+        margin-left: 2rem;
+        /* object-fit: fill; */
+        display: flex;
+        align-items: center;
+    
+    }
+    .feedimg{
+        /* position: relative; */
+        /* top: 1rem; */
+        /* left */
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        /* overflow: hidden; */
+        /* margin-left: 1rem; */
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    .footerProfile{
+        width: 60%;
+        height: 3rem;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .postcreatedby{
+        display: flex;
+        height: 3rem;
+        font-size: 2rem;
+        align-items: center;
+        font-weight: 500;
+    }
+    .category{
+        /* background-color: aqua; */
+        width:35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .category>a{
+        text-decoration: none;
+        background-color: rgb(212, 182, 182);
+        width: 10rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        color:rgb(176, 62, 62);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+}

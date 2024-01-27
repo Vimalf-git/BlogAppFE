@@ -13,6 +13,7 @@
     align-items: center;
     /* margin-top: 4rem; */
     gap: 2rem;
+    /* background-color: aqua; */
 }
 .postform{
     width: 28rem;
@@ -104,3 +105,4 @@
     overflow: auto;
     opacity: 1;
   }
+  

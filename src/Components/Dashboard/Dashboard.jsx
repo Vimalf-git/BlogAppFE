@@ -20,7 +20,7 @@ const Dashboard = () => {
     <div className='dashboard'>
       <div className='cardParent'>
         {
-          feedData.length!=0?feedData.map((e) => {
+          feedData.length>0?feedData.map((e) => {
             return <div className='postCard' key={e._id} onClick={()=>{navigate(`/postview/${e._id}`)}} >
               <div className='postImgCon' >
                 <img className='postImg' src={e.imageUrl?e.imageUrl:uploadImg} />
