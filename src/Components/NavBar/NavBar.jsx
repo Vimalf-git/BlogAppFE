@@ -1,17 +1,15 @@
 import { Avatar, Button } from '@mui/material'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 import './NavBar.css'
-import { Close, Logout } from '@mui/icons-material';
-import { jwtDecode } from 'jwt-decode';
-import uselogout from '../../Common/Uselogout';
+import { Logout } from '@mui/icons-material';
 import { UserDataGlobal } from '../../Common/UserContext';
 import hero from '../../image/profile/836.jpg'
 import { FaHamburger } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
-
+import useLogout from '../../Common/useLogout'
 const NavBar = () => {
 
   const [avatarPopUp, setAvatarPopUp] = useState(false);
@@ -43,16 +41,9 @@ const NavBar = () => {
       },
     },
   }));
-  const logout = uselogout()
-  // let token=sessionStorage.getItem('token');
-  // const[name,setName]=useState("");
+  const logout = useLogout()
   const { username, profilePic } = useContext(UserDataGlobal)
-  // const[propic,setProPic]=useState();
-  // useEffect((e)=>{
-  //   let jwtData=jwtDecode(token)
-  //   setName(jwtData.name)
-  //   setProPic(jwtData.profil)
-  // },[name,propic])
+
   const [hamBurger, setHamBurger] = useState(false);
   const navigate=useNavigate()
   return (

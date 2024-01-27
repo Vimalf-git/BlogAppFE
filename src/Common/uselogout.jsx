@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
-function uselogout(){
+function useLogout(){
     let navigate=useNavigate()
   return () => {
     sessionStorage.clear()
@@ -8,4 +8,4 @@ function uselogout(){
   }
 }
 
-export default uselogout
+export default useLogout
