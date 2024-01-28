@@ -9,7 +9,7 @@ import { UserDataGlobal } from '../../Common/UserContext';
 import hero from '../../image/profile/836.jpg'
 import { FaHamburger } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
-import useLogout from '../../Common/useLogout';
+// import useLogout from '../../Common/useLogout';
 // import useLogout from '../../Common/useLogout'
 const NavBar = () => {
   const navigate=useNavigate()
