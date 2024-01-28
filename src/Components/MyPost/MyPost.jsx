@@ -8,8 +8,9 @@ import { Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import uploadImg from '../../image/profile/noimg.jpg'
 import { UserDataGlobal } from '../../Common/UserContext';
+import hero from '../../image/profile/836.jpg'
 const MyPost = () => {
-  const {myPost,setMyPost}=useContext(UserDataGlobal)
+  const {profilePic}=useContext(UserDataGlobal)
   const [feeds, setFeeds] = useState([]);
   let navigate = useNavigate();
   const getAllFeed = async () => {
@@ -27,7 +28,6 @@ const MyPost = () => {
 
     }
   }
-
   useEffect(() => {
     getAllFeed();
   }, [])
@@ -65,7 +65,7 @@ const MyPost = () => {
               <div className='cardFooter'>
                 <div className='footerProfile'>
                   <div className='Feedscardpic'>
-                    <img className='feedimg' src={e.profileImgUrl} />
+                    <img className='feedimg' src={profilePic?profilePic:hero} />
                   </div>
                   <div>
                     <p className='postcreatedby'>{e.name}</p>

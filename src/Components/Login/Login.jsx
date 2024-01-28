@@ -50,7 +50,7 @@ function Login() {
         <>
             <div className='loginPage'>
                 <div className='designPart'>
-                        <img src={blogLogImg} alt='blogLogImg' className="scribbleImg"/>
+                    <img src={blogLogImg} alt='blogLogImg' className="scribbleImg" />
                 </div>
                 <div className='loginForm'>
                     <Typography variant='h5' component="p"
