@@ -5,7 +5,7 @@ import { Button, IconButton, InputAdornment, TextField, Typography } from '@mui/
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import ApiService from '../../Common/ApiService';
 import './Login.css'
-// import ScribbleImg from '../../assets/Login/scribleLogin.svg'
+import blogLogImg from '../../image/profile/loginimg.svg'
 function Login() {
     const [email, setMail] = useState("")
     const [password, setPassword] = useState("");
@@ -50,10 +50,7 @@ function Login() {
         <>
             <div className='loginPage'>
                 <div className='designPart'>
-                     <Typography className='scribblename' variant='h5' component="p">
-                    Scribble Here</Typography>
-                    {/*<Button variant='contained' color='warning' onClick={(e) =>toggleSign(e)}>Sign Up</Button> */}
-                    {/* <img src={ScribbleImg} className="scribbleImg"/> */}
+                        <img src={blogLogImg} alt='blogLogImg' className="scribbleImg"/>
                 </div>
                 <div className='loginForm'>
                     <Typography variant='h5' component="p"
@@ -85,6 +82,11 @@ function Login() {
                                         </InputAdornment>
                                 }}
                             />
+                        </div>
+                        <div>
+                            <p>Use this for demo⬇️</p>
+                            <p>E-mail:-selvamvimaldz1@gmail.com</p>
+                            <p>Password:-vimal</p>
                         </div>
                         <div className='for-crt-link mb-3'>
                             <Link style={{ textDecoration: 'none', color: '#4481eb' }} to='/forgetpassword'>Forget password?</Link>

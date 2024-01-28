@@ -9,6 +9,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import ApiService from '../../Common/ApiService'
 // import pencilImg from '../../assets/Login/pencilImg.svg'
+import signupImg from '../../image/profile/SignupImg.svg'
 function Signup() {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
@@ -45,15 +46,7 @@ function Signup() {
         <>
             <div className='signupPage'>
                 <div className='designSignupPart'>
-                    {/* <Typography variant='h5' component="p"
-                        sx={{ color: "#ffff" }}>
-                        Already Have an account?</Typography>
-                    <Typography variant='h5' component="p"
-                        sx={{ color: "#ffff" }}>
-                        please login...
-                    </Typography> */}
-                    <img src={pencilImg} className='pencilImg' />
-                    {/* <Button variant='contained' color='warning' onClick={() => toggleLogin()}>Sigh In</Button> */}
+                    <img src={signupImg} className='pencilImg' />
                 </div>
                 <div className='signupForm'>
                     <Typography variant='h5' component="p"
