@@ -1,25 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Friends.css'
 import ApiService from '../../Common/ApiService'
 import { jwtDecode } from 'jwt-decode';
 import { HashLoader } from 'react-spinners';
 import { Login } from '@mui/icons-material';
 import userNonImg from '../../image/profile/836.jpg'
+import { UserDataGlobal } from '../../Common/UserContext';
 const Friends = () => {
-    const [userList, setUserList] = useState([]);
-    const getUserList = async () => {
-        let token = sessionStorage.getItem('token');
-        let name = jwtDecode(token).username
-        try {
-            let res = await ApiService.get('/getuserlist');
-            if (res.status == 200) {
-                let filterList = res.data.userList.filter((e) => e.name != name);
-                setUserList(filterList);
-            }
-        } catch (error) {
+    // const [userList, setUserList] = useState([]);
+    // const getUserList = async () => {
+    //     let token = sessionStorage.getItem('token');
+    //     let name = jwtDecode(token).username
+    //     try {
+    //         let res = await ApiService.get('/getuserlist');
+    //         if (res.status == 200) {
+    //             let filterList = res.data.userList.filter((e) => e.name != name);
+    //             setUserList(filterList);
+    //         }
+    //     } catch (error) {
 
-        }
-    }
+    //     }
+    // }
+    const{userList,getUserList}=useContext(UserDataGlobal)
     useEffect(() => {
         getUserList()
     }, [])

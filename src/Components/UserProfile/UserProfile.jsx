@@ -10,7 +10,8 @@ import hero from '../../image/profile/836.jpg'
 const UserProfile = () => {
   const { username,
     mail, UploadprofileImg, profilePic,
-     setUploadProfileImg,getData } = useContext(UserDataGlobal)
+     setUploadProfileImg,getData , getUserList
+    } = useContext(UserDataGlobal)
   const [localname, setLocalname] = useState();
   const updateProfile = async () => {
     let payload = new FormData();
@@ -26,6 +27,7 @@ const UserProfile = () => {
   }
   useEffect(()=>{
     setLocalname(username)
+    getUserList()
   },[])
   return (
     <div className='userProfile'>

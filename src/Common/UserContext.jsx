@@ -10,6 +10,7 @@ function UserContext({children}){
     const [profilePic, setProfilePic] = useState();
     const[feedData,setFeedData]=useState([]);
     const [myPost,setMyPost]=useState([]);
+    const [userList, setUserList] = useState([]);
     const getData=async()=>{
         try {
             let token = sessionStorage.getItem('token');
@@ -56,14 +57,25 @@ function UserContext({children}){
             
         }
     }
+    const getUserList = async () => {
+        try {
+            let res = await ApiService.get('/getuserlist');
+            if (res.status == 200) {
+                let filterList = res.data.userList.filter((e) => e.name != username);
+                setUserList(filterList);
+            }
+        } catch (error) {
 
+        }
+    }
     
    useEffect(()=>{
     getData()
+    getUserList()
    },[])
     return(
-        <UserDataGlobal.Provider value={{username,setUsername,feedData,myPost,
-            setMyPost, mail,UploadprofileImg,profilePic,setUploadProfileImg,getData}}>
+        <UserDataGlobal.Provider value={{userList,username,setUsername,feedData,myPost,
+            setMyPost, mail,UploadprofileImg,profilePic,setUploadProfileImg,getData,getUserList}}>
             {children}
         </UserDataGlobal.Provider>
     )
