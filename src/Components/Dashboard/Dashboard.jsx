@@ -46,7 +46,7 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-          }):<><HashLoader color="#36d7b7"/>Data Not Found</>
+          }):<><HashLoader color="#36d7b7"/>No Data Found</>
         }
       </div>
     </div>

@@ -103,13 +103,11 @@ const NavBar = () => {
             <span style={{ color: 'black',fontSize:'1.5rem',fontWeight:'600' }}>{username}</span>
           </div>
           <div className='mobViewlistMenu'>
-            {/* <ul> */}
             <Link to={"/dashboard"}>Feed</Link>
             <Link to={"/mypost"}>MyPost</Link>
             <Link to={"/postcreate"}>Create</Link>
             <Link to={"/friendsList"}>Friends</Link>
             <Button onClick={() => { useLogout() }}><Logout /> &nbsp;Logout</Button>
-            {/* </ul> */}
           </div>
 
         </div> : <></>}
